@@ -134,8 +134,8 @@ func main() {
 	}()
 
 	grpcServer := grpc.NewServer(
-		grpc.InitialWindowSize(512*1024),
-		grpc.InitialConnWindowSize(512*1024),
+		//grpc.InitialWindowSize(512*1024),
+		//grpc.InitialConnWindowSize(512*1024),
 	)
 	echo.RegisterEchoServer(grpcServer, &server{})
 

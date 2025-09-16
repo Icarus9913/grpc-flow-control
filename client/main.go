@@ -48,8 +48,8 @@ func main() {
 
 	conn, err := grpc.NewClient(*addr,
 		grpc.WithTransportCredentials(insecure.NewCredentials()),
-		grpc.WithInitialWindowSize(512*1024),
-		grpc.WithInitialConnWindowSize(512*1024),
+		//grpc.WithInitialWindowSize(512*1024),
+		//grpc.WithInitialConnWindowSize(512*1024),
 	)
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
